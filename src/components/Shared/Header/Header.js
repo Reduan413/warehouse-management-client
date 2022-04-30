@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import logo from "../../../image/logo.png";
 import CustomLink from "../CustomLink/CustomLink";
 import './Header.css'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   return (
@@ -33,7 +35,7 @@ const Header = () => {
               </Nav.Link>
 
               <Nav.Link as={Link} to="/login">
-               <Button className="btn" variant="">Login</Button> 
+               <Button className="btn" variant=""><FontAwesomeIcon icon={faRightToBracket} /> Login</Button> 
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
