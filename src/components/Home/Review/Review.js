@@ -2,7 +2,7 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import React from "react";
 import OwlCarousel from "react-owl-carousel";
-import userPic from "../../image/user-one.png";
+import userPic from "../../../image/user-one.png";
 import ReviewItem from "../ReviewItem/ReviewItem";
 import "./Review.css";
 

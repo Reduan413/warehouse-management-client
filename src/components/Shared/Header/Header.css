@@ -1,0 +1,9 @@
+.btn{
+    display: inline-block!important;
+    margin-top: 1rem;
+    border: 0.1rem solid #0eb582 !important;
+    background: #f0fdfa !important;
+    color: #0eb582 !important;
+    cursor: pointer!important;
+    text-transform: capitalize;
+}
