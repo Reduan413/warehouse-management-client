@@ -13,7 +13,7 @@
     padding: 2rem;
     text-align: center;
   }
-  .accout-form form h3 {
+  .accout-form  h3 {
     font-size: 1.5rem;
     text-transform: capitalize;
     color: #444;
@@ -49,6 +49,15 @@
     margin-left: auto;
   }
   .accout-form form .flex a:hover {
+    text-decoration: underline;
+    color: #0eb582;
+  }
+  .accout-form  a {
+    font-size: .8rem;
+    color: #777;
+    margin-left: auto;
+  }
+  .accout-form a:hover {
     text-decoration: underline;
     color: #0eb582;
   }

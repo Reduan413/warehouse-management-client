@@ -1,20 +1,73 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useRef } from "react";
+import {
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import auth from "../../../firebase.init";
+import Loading from "../../Shared/Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import "./Login.css";
 
 const Login = () => {
   const navigate = useNavigate();
+  const emailRef = useRef("");
+  const location = useLocation();
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending, reseterror] =
+    useSendPasswordResetEmail(auth);
+  let errorElement;
+  let from = location.state?.from?.pathname || "/";
   const navigateRegister = (e) => {
     navigate("/register");
   };
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    await signInWithEmailAndPassword(email, password);
+  };
+
+  const resetPassword = async (e) => {
+    const email = emailRef.current.value;
+    if (email) {
+      await sendPasswordResetEmail(email);
+      // toast("Sent Email");
+    } else {
+      // toast("Please Enter your email address");
+      alert("Please Enter your email address");
+    }
+  };
+  
+  if (user) {
+    navigate(from, { replace: true });
+  }
+  if (loading || sending) {
+    return <Loading />;
+  }
+  if (error || reseterror) {
+    errorElement = (
+      <div>
+        <p className="text-danger">Error: {error?.message}</p>
+      </div>
+    );
+  }
   return (
     <div className="accout-form">
-      <form className="login-form">
-        <h3>login now</h3>
-        <input type="email" placeholder="enter your email" className="box" />
+      <h3>login now</h3>
+      <form className="login-form" onSubmit={handleLogin}>
+        <input
+          type="email"
+          ref={emailRef}
+          name="email"
+          placeholder="enter your email"
+          className="box"
+        />
         <input
           type="password"
+          name="password"
           placeholder="enter your password"
           className="box"
         />
@@ -29,11 +82,14 @@ const Login = () => {
               Please Register
             </Link>
           </p>
-          <Link to="">forgot password</Link>
+          <Link to="" onClick={resetPassword}>
+            forgot password
+          </Link>
         </div>
+        {errorElement}
         <input type="submit" value="login now" className="btn" />
       </form>
-      <SocialLogin/>
+      <SocialLogin />
     </div>
   );
 };

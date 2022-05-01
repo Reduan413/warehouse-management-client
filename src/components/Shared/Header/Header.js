@@ -1,13 +1,20 @@
+import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { signOut } from "firebase/auth";
 import React from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import auth from "../../../firebase.init";
 import logo from "../../../image/logo.png";
 import CustomLink from "../CustomLink/CustomLink";
-import './Header.css'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
+import "./Header.css";
 
 const Header = () => {
+  const [user] = useAuthState(auth);
+  const handleSignOut = () => {
+    signOut(auth);
+  };
   return (
     <>
       <Navbar
@@ -24,19 +31,43 @@ const Header = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link><CustomLink to="/">Home</CustomLink></Nav.Link>
-              <Nav.Link><CustomLink to="/donation">Donation</CustomLink></Nav.Link>
-              <Nav.Link><CustomLink to="/about">About</CustomLink></Nav.Link>
-              <Nav.Link><CustomLink to="/blog">Blog</CustomLink></Nav.Link>
+              <Nav.Link>
+                <CustomLink to="/">Home</CustomLink>
+              </Nav.Link>
+              <Nav.Link>
+                <CustomLink to="/donation">Donation</CustomLink>
+              </Nav.Link>
+              <Nav.Link>
+                <CustomLink to="/about">About</CustomLink>
+              </Nav.Link>
+              <Nav.Link>
+                <CustomLink to="/blog">Blog</CustomLink>
+              </Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link as={Link} to="/about">
-              <Button variant="dark">Admin</Button>
-              </Nav.Link>
-
-              <Nav.Link as={Link} to="/login">
-               <Button className="btn" variant=""><FontAwesomeIcon icon={faRightToBracket} /> Login</Button> 
-              </Nav.Link>
+              {user ? (
+                <>
+                  <Nav.Link as={Link} to="/about">
+                    <Button variant="dark">Add Item</Button>
+                  </Nav.Link>
+                  <Nav.Link as={Link} to="/about">
+                    <Button variant="dark">My Item</Button>
+                  </Nav.Link>
+                  <button
+                    onClick={handleSignOut}
+                    className="btn btn-link text-decoration-none"
+                    style={{height:39, marginTop:23}}
+                  >
+                    Sign Our
+                  </button>
+                </>
+              ) : (
+                <Nav.Link as={Link} to="/login">
+                  <Button className="btn" variant="">
+                    <FontAwesomeIcon icon={faRightToBracket} /> Login
+                  </Button>
+                </Nav.Link>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

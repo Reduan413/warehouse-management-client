@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Container, Row } from "react-bootstrap";
+import { Button, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Inventory from "../Inventory/Inventory";
 
 const Inventorys = () => {
@@ -25,6 +26,9 @@ const Inventorys = () => {
           <Inventory key={product.id} product={product}/>
         ))}
       </Row>
+      <div>
+        <Link to="manageinventory"><Button>Manage Inventory</Button></Link>
+      </div>
     </Container>
   );
 };
