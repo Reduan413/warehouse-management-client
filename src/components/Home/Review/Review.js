@@ -9,6 +9,7 @@ import "./Review.css";
 const Review = () => {
   const reviews = [
     {
+      id:"r1",
       name: "Rekob Ramya",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.",
@@ -16,6 +17,7 @@ const Review = () => {
       img: "https://i.ibb.co/hgGJc8d/Gareth-Bale.jpg",
     },
     {
+      id:"r2",
       name: "Brandon Savage",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.",
@@ -23,6 +25,7 @@ const Review = () => {
       img: "https://i.ibb.co/z7Kp6yr/np-file-33188.jpg",
     },
     {
+      id:"r3",
       name: "Steve Burns",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.",
@@ -30,6 +33,7 @@ const Review = () => {
       img: "https://i.ibb.co/CP5sj7g/2856040-58866808-2560-1440.jpg",
     },
     {
+      id:"r4",
       name: "Kevin Canlas",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.",
@@ -91,7 +95,7 @@ const Review = () => {
                 </div>
               ) : (
                 reviews.map((review) => {
-                  return <ReviewItem review={review} key={review._key} />;
+                  return <ReviewItem review={review} key={review.id} />;
                 })
               )}
             </OwlCarousel>

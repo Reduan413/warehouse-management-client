@@ -7,3 +7,7 @@
     cursor: pointer!important;
     text-transform: capitalize;
 }
+.btn:hover {
+    background: #0eb582!important;
+    color: #fff!important;
+}

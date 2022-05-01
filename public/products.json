@@ -1,0 +1,122 @@
+[
+  {
+    "id": "l1chn4020",
+    "name": "Chuwi HeroBook",
+    "price": 31470,
+    "img": "https://www.startech.com.bd/image/cache/catalog/laptop/chuwi/herobook/herobook-pro/herobook-pro-2-500x500.jpg",
+    "description": "Intel Celeron Processor N4020 (4M Cache, 1.10 GHz up to 2.80 GHz),8GB LPDDR4,RAM, 256GB SSD, 14.1 Inch(1920 x 1080) IPS Anti-Glare Display",
+    "quantity": "10",
+    "supplierName":"Md. Rasul",
+    "sold": "0"
+  },
+  {
+    "id": "l2le82hs0",
+    "name": "Lenovo IdeaPad Flex",
+    "price": 75000,
+    "img": "https://www.globalbrand.com.bd/image/cache/catalog/Lenovo%20Laptop/Lenovo-IdeaPad-Flex-5i-(-82HS0130IN)-11th-Gen-Core-i3-Laptop-800x800.jpg",
+    "description": "AMD Ryzen 5 4500U (8MB cache and 2.3 GHz upto 4.0 GHz),8GB DDR4 RAM, 2512GB SSD, 14 Inch FHD(1920×1080) Touch Display",
+    "quantity": "10",
+    "supplierName":"Md. Tosur",
+    "sold": "0"
+  },
+  {
+    "id": "l3hpn4020",
+    "name": "HP 15s-du1114TU",
+    "price": 35810,
+    "img": "https://www.startech.com.bd/image/cache/catalog/laptop/acer/ex215-52-384m/ex215-52-384m-001-500x500.jpg",
+    "description": "Intel Celeron N4020 (1.1 GHz up to 2.8 GHz, 2 cores),4 GB DDR4 2400MHz RAM, 1 TB 5400 rpm SATA HDD, 15.6 Inch HD (1366 x 768) Display",
+    "quantity": "9",
+    "supplierName":"Mohammed Parvic",
+    "sold": "0"
+  },
+  {
+    "id": "l4le15itl6",
+    "name": "Lenovo IdeaPad 3",
+    "price": 76000,
+    "img": "https://www.globalbrand.com.bd/image/cache/catalog/Lenovo%20Laptop/lenovo-ideapad-slim-3i-14-arctic-grey3-800x800.jpg",
+    "description": "AMD Ryzen 5 5500U (8M Cache, 2.1GHz up to 4.0GHz, 6 cores),8GB 3200MHZ RAM, 512GB NVMe PCIe,15.6 Inch FHD (1920 x 1080) IPS",
+    "quantity": "10",
+    "supplierName":"Mohammed Rasul",
+    "sold": "0"
+  },
+  {
+    "id": "l5ac384m",
+    "name": "Acer Extensa 15 EX215-52",
+    "price": 44490,
+    "img": "https://www.startech.com.bd/image/cache/catalog/laptop/hp-laptop/15s-du1114tu/15s-du1114tu-02-500x500.jpg",
+    "description": "Intel Core i5-1035G1 Processor (6M Cache, 1.00 GHz up to 3.60 GHz),8GB DDR4 2666MHz RAM, 1TB 5400rpm SATA3 HDD, 15.6 Inch FHD (1920x1080) Dispaly",
+    "quantity": "11",
+    "supplierName":"Md. Rabey",
+    "sold": "0"
+  },
+  {
+    "id": "l6asx515ea",
+    "name": "ASUS VivoBook 15",
+    "price": 51500,
+    "img": "https://www.globalbrand.com.bd/image/cache/catalog/ASUS%20LAPTOP/ASUS-Vivobbok-15-M515DA-2-500x500.jpg",
+    "description": "Intel Celeron Dual Core N4020 (1.10 GHz up to 2.80 GHz, Cache 4MB),4GB DDR4 RAM (Onboard), 512GB PCIe G3 SSD, 15.6 Inch FHD (1920X1080) LED",
+    "quantity": "10",
+    "supplierName":"Md. Tanvir chy",
+    "sold": "0"
+  },
+  {
+    "id": "l7asx515fa",
+    "name": "Asus VivoBook 15 X515FA",
+    "price": 46200,
+    "img": "https://www.startech.com.bd/image/cache/catalog/laptop/asus/vivobook-15-x515ea/vivobook-15-x515ea-05-500x500.jpg",
+    "description": "Intel Core i3-10110U (4M Cache, 2.10 GHz up to 4.10 GHz),4GB DDR4 3200MHz RAM, 1TB 5400 RPM SATA HDD, 15.6 Inch FHD (1920 x 1080) LED",
+    "quantity": "10",
+    "supplierName":"Mohammed Rony",
+    "sold": "0"
+  },
+  {
+    "id": "l8asux363ja",
+    "name": "Asus Zenbook Flip 13",
+    "price": 70000,
+    "img": "https://www.globalbrand.com.bd/image/cache/catalog/ASUS%20LAPTOP/Zenbook-Flip-13-UX363-800x800.jpg",
+    "description": "Intel Core i7-1165G7 Processor (12M Cache, 2.80 GHz up to 4.70 GHz),16GB 3200MHz LPDDR4X RAM, 512G PCIEG3 SSD, 13.3 Inch FHD (1920X1080) Display",
+    "quantity": "7",
+    "supplierName":"Anjun",
+    "sold": "0"
+  },
+  {
+    "id": "l9le81we0",
+    "name": "Lenovo IdeaPad Slim",
+    "price": 48830,
+    "img": "https://www.startech.com.bd/image/cache/catalog/laptop/lenovo/ip-slim/ip-slim-15-500x500.jpg",
+    "description": "Intel Core i7-1165G7 (12M Cache,2.80 GHz up to 4.70 GHz),16GB DDR4 3200MHz RAM, 512GB M.2 NVME SSD, NVIDIA MX450 GDDR6 2GB,14 Inch 2.2K (2240×1400) IPS 300nits Anti-glare, 60Hz, 100% sRGB",
+    "quantity": "15",
+    "supplierName":"Tanvir",
+    "sold": "0"
+  },
+  {
+    "id": "l10hpfq264",
+    "name": "HP 15s-fq2644TU",
+    "price": 59130,
+    "img": "https://www.startech.com.bd/image/cache/catalog/laptop/hp-laptop/15s-fq2644tu/15s-fq2644tu-02-500x500.jpg",
+    "description": "Intel Core i5-1135G7 (8M Cache, 2.40 GHz up to 4.20 GHz),8 GB DDR4-3200 MHz RAM, 512 GB PCIe NVMe M.2 SSD, 15.6 InchHD (1366 x 768)",
+    "quantity": "15",
+    "supplierName":"Mohammed Akib",
+    "sold": "0"
+  },
+  {
+    "id": "l11msia11sek",
+    "name": "MSI Stealth 15M",
+    "price": 140000,
+    "img": "https://www.startech.com.bd/image/cache/catalog/laptop/msi/stealth-15m-a11sek/stealth-15m-a11sek-4-500x500.jpg",
+    "description": "Intel Core i7-1185G7 Processor (12M Cache, 3.00 GHz up to 4.80 GHz),16GB DDR4 2666MHz RAM, 512GB NVMe PCIe Gen3x4 SSD, RTX 2060 Max-Q 6GB Graphics",
+    "quantity": "8",
+    "supplierName":"Habib chy",
+    "sold": "0"
+  },
+  {
+    "id": "l12wazx3701",
+    "name": "Walton TAMARIND",
+    "price": 33790,
+    "img": "https://www.startech.com.bd/image/cache/catalog/laptop/walton/tamarind-ex510g/tamarind-ex510g-front-500x500.jpg",
+    "description": "Intel Core i5-10210U Processor (6M Cache, 1.60GHz up to 4.20 GHz),8GB DDR4 2666MHz RAM,512GB SATAIII M.2 SSD, 14.0 Inch FHD LED display",
+    "quantity": "12",
+    "supplierName":"Md. Masum",
+    "sold": "0"
+  }
+]

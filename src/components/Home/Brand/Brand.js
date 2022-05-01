@@ -16,7 +16,6 @@ const Brand = () => {
   useEffect(() => {
     const fetchData = async () => {
       await axios.get("brand.json").then((res) => {
-        console.log(res);
         setItems(res.data);
       });
     };
