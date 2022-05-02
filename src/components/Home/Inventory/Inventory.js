@@ -3,8 +3,8 @@ import { Button, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "./Inventory.css";
 
-const Inventory = ({ product }) => {
-  const {id, img, name, price, description, quantity, supplierName } = product;
+const Inventory = ({ inventory }) => {
+  const {_id, img, name, price, description, quantity, supplierName } = inventory;
   const navigate = useNavigate();
 
   const navigationToInventoryDetail= (id) => {
@@ -27,7 +27,7 @@ const Inventory = ({ product }) => {
             <p>Quantity: {quantity}</p>
             <p>Supplier Name : {supplierName}</p>
 
-            <Button className="btn btn-outline-success" onClick={()=> navigationToInventoryDetail(id)}>Update</Button>
+            <Button className="btn btn-outline-success" onClick={()=> navigationToInventoryDetail(_id)}>Update</Button>
           </div>
         </div>
       </div>

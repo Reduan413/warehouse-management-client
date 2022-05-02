@@ -1,12 +1,14 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
+import useInventoryDetail from "../../hooks/useInventoryDetail";
 
 const InventoryDetail = () => {
-  const { id } = useParams();
+  const { inventoryId } = useParams();
+  const [inventory, setInvetory] = useInventoryDetail(inventoryId);
   return (
     <Container>
-      <h1>hello inam {id}</h1>
+      <h1>hello inam {inventory.name}</h1>
       <Row classNameName="g-4">
         <Col xs={8}>
           <div className="card mb-3" >
