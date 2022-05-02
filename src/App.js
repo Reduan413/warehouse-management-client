@@ -3,6 +3,8 @@ import { ToastContainer } from "react-toastify";
 import "./App.css";
 import About from "./components/About/About";
 import Home from "./components/Home/Home/Home";
+import MyInventorys from "./components/Home/MyInventorys/MyInventorys";
+import AddInventory from "./components/Home/AddInventory/AddInventory";
 import InventoryDetail from "./components/InventoryDetail/InventoryDetail";
 import Login from "./components/Login/Login/Login";
 import Register from "./components/Login/Login/Register";
@@ -13,7 +15,7 @@ import Header from "./components/Shared/Header/Header";
 
 function App() {
   return (
-    <div className="App">
+    <div className="">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -31,6 +33,22 @@ function App() {
           element={
             <RequierAuth>
               <ManageInventory />
+            </RequierAuth>
+          }
+        />
+        <Route
+          path="/myinventorys"
+          element={
+            <RequierAuth>
+              <MyInventorys />
+            </RequierAuth>
+          }
+        />
+        <Route
+          path="/addinventory"
+          element={
+            <RequierAuth>
+              <AddInventory />
             </RequierAuth>
           }
         />

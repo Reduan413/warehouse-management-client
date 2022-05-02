@@ -15,8 +15,9 @@ const Inventorys = () => {
         {inventorys.slice(2, 8).map((inventory) => (
           <Inventory key={inventory._id} inventory={inventory} />
         ))}
+        
       </Row>
-      <div>
+      <div className="text-center">
         <Link to="manageinventory">
           <Button>Manage Inventory</Button>
         </Link>
