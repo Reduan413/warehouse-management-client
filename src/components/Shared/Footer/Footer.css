@@ -13,12 +13,10 @@
     font-size: 1.2rem;
     text-transform: capitalize;
     color: #444;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
   }
   
-  .footer .box-container .box h3 i {
-    color: #0eb582;
-  }
+  
   
   .footer .box-container .box .share {
     margin-top: 1rem;
@@ -54,19 +52,17 @@
   }
   
   .footer .box-container .box p {
-    font-size: 1.4rem;
+    font-size: 1rem;
     line-height: 2;
     color: #777;
-    padding: 1rem 0;
     text-align: justify;
   }
   
   .footer .box-container .box .email {
     width: 100%;
-    padding: 1rem 1rem;
+    padding: 0.5rem 0.5rem;
     font-size: 1rem;
     border: 0.1rem solid #0eb582;
-    margin-bottom: 1rem;
   }
   
   .credit {

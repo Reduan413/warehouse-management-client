@@ -55,7 +55,7 @@ function App() {
         />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/answer" element={<Answer />} />
+        <Route path="/blog" element={<Answer />} />
         <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
