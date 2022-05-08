@@ -1,0 +1,10 @@
+.cardBtn .deleteBtn {
+    color: red !important;
+    background-color: #fff !important;
+    border: 0.1rem solid red !important;
+  }
+.cardBtn .deleteBtn:hover {
+  color: rgb(243, 237, 237) !important;
+  background-color: red !important;
+  border: 0.1rem solid red !important;
+}
