@@ -47,7 +47,7 @@ const ManageInventory = () => {
   return (
     <>
       <Container>
-        <Row xs={1} md={2}>
+        <Row xs={1} md={2} >
           <Col className="d-flex align-items-center">
             <Link to="/manageinventory" className="text-dark">
               <FontAwesomeIcon icon={faHouseChimney} size="2x" />
@@ -70,8 +70,8 @@ const ManageInventory = () => {
         </Row>
       </Container>
       <hr className="hr"></hr>
-      <div className="container mt-2">
-        <Table striped bordered hover size="sm">
+      <div className="container mt-2 ">
+        <Table striped bordered hover size="sm" className="manageinventory">
           <thead>
             <tr className="text-center">
               <th>#</th>

@@ -54,8 +54,8 @@ const MyInventorys = () => {
   return (
     <>
       <Container>
-        <Row xs={1} md={2}>
-          <Col className="d-flex align-items-center">
+        <Row xs={1} md={2} className="m-auto">
+          <Col className="d-flex align-items-center ">
             <Link to="/manageinventory" className="text-dark">
               <FontAwesomeIcon icon={faHouseChimney} size="2x" />
             </Link>

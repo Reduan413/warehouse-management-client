@@ -1,76 +1,90 @@
 .accout-form {
-    top: 0;
-    background: #fff;
+  top: 0;
+  background: #fff;
+  height: 100%;
+  padding: 2rem;
+  width: 500px;
+  margin: auto;
+  text-align: center;
+  border: 0.1rem solid #0eb582;
+  border-radius: 10px;
+}
+.accout-form form {
+  padding: 2rem;
+  text-align: center;
+}
+.accout-form h3 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: #444;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.accout-form form .box {
+  width: 100%;
+  padding: 0.5rem 0.4rem;
+  border: 0.1rem solid #0eb582;
+  font-size: 1rem;
+  margin: 0.7rem 0;
+}
+
+.accout-form form .flex {
+  padding: 0.1rem 0;
+  display: flex;
+}
+
+.accout-form form .flex input {
+  margin: 5px;
+}
+.accout-form form .flex label {
+  font-size: 1rem;
+  color: #777;
+  cursor: pointer;
+}
+
+.accout-form form .flex a {
+  font-size: 0.8rem;
+  color: #777;
+  margin-left: auto;
+}
+.accout-form form .flex a:hover {
+  text-decoration: underline;
+  color: #0eb582;
+}
+.accout-form a {
+  font-size: 0.8rem;
+  color: #777;
+  margin-left: auto;
+}
+.accout-form a:hover {
+  text-decoration: underline;
+  color: #0eb582;
+}
+
+.accout-form form .btn {
+  width: 75%;
+}
+
+.accout-form .buttons .btn {
+  margin: 0 0.5rem;
+}
+
+.accout-form .buttons:hover {
+  background: #0eb582;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .accout-form {
     height: 100%;
-    padding: 2rem;
-    width: 500px;
-    margin:auto;
-    text-align: center;
-    border: 0.1rem solid #0eb582 ;
-    border-radius:10px;
+    padding: 1rem;
+    width: 450px;
   }
-  .accout-form form {
-    padding: 2rem;
-    text-align: center;
+}
+@media (max-width: 450px) {
+  .accout-form {
+    height: 100%;
+    padding: 1rem;
+    width: 450px;
   }
-  .accout-form  h3 {
-    font-size: 1.5rem;
-    text-transform: capitalize;
-    color: #444;
-    padding-bottom: 0.5rem;
-    text-transform: uppercase;
-  }
-  
-  .accout-form form .box {
-    width: 100%;
-    padding: .5rem .4rem;
-    border: 0.1rem solid #0eb582;
-    font-size: 1rem;
-    margin: 0.7rem 0;
-  }
-  
-  .accout-form form .flex {
-    padding: .1rem 0;
-    display: flex;
-  }
-  
-  .accout-form form .flex input {
-      margin: 5px ;
-  }
-  .accout-form form .flex label {
-    font-size: 1rem;
-    color: #777;
-    cursor: pointer;
-  }
-  
-  .accout-form form .flex a {
-    font-size: .8rem;
-    color: #777;
-    margin-left: auto;
-  }
-  .accout-form form .flex a:hover {
-    text-decoration: underline;
-    color: #0eb582;
-  }
-  .accout-form  a {
-    font-size: .8rem;
-    color: #777;
-    margin-left: auto;
-  }
-  .accout-form a:hover {
-    text-decoration: underline;
-    color: #0eb582;
-  }
-  
-  .accout-form form .btn {
-    width: 75%;
-  }
-  
-  .accout-form .buttons .btn {
-    margin: 0 0.5rem;
-  }
-  
-  .accout-form .buttons:hover {
-    background: #0eb582;
-    color: #fff;
-  }
+}

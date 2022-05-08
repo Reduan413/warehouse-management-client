@@ -1,4 +1,4 @@
-import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRightFromBracket, faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { signOut } from "firebase/auth";
 import React from "react";
@@ -53,7 +53,7 @@ const Header = () => {
                     className="btn btn-link text-decoration-none"
                     style={{ height: 39, marginTop: 23 }}
                   >
-                    Sign Our
+                    <FontAwesomeIcon icon={faArrowRightFromBracket} /> Sign Our
                   </button>
                 </>
               ) : (

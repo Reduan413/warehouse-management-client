@@ -80,10 +80,10 @@ const InventoryDetail = () => {
       <div>
         <Container>
           <Row>
-            <Col xs={10}>
+            <Col xs={9} md={10}>
               <h1>Inventory Name: {name}</h1>
             </Col>
-            <Col xs={2}>
+            <Col xs={2} md={2}>
               <Link to="/manageinventory">
                 <Button>Manage Inventory</Button>
               </Link>
