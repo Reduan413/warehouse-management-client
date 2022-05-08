@@ -8,8 +8,35 @@
   background-color: red !important;
   border: 0.1rem solid red !important;
 }
+.cardBtn .viewBtn {
+  color: rgb(49, 108, 236) !important;
+  background-color: #fff !important;
+  border: 0.1rem solid rgb(49, 108, 236) !important;
+}
+.cardBtn .viewBtn:hover {
+color: rgb(243, 237, 237) !important;
+background-color: rgb(49, 108, 236) !important;
+border: 0.1rem solid rgb(49, 108, 236) !important;
+}
 .hr{
   color: rgb(33, 193, 94) !important;
   border: 0.1rem solid;
   box-shadow: 0px 6px rgb(33, 193, 94);
+}
+.pagination {
+  width: 100%;
+  text-align: center;
+
+  display: block !important;
+  margin: auto !important;
+  margin-bottom: 15px !important;
+}
+.pagination button {
+  margin-right: 10px;
+  background-color: white;
+  border: 1px solid #0eb582;
+}
+.pagination .selected {
+  background-color: #0eb582;
+  border: 1px solid white;
 }
