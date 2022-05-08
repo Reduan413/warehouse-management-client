@@ -34,9 +34,7 @@ const Header = () => {
               <Nav.Link>
                 <CustomLink to="/">Home</CustomLink>
               </Nav.Link>
-              <Nav.Link>
-                <CustomLink to="/donation">Donation</CustomLink>
-              </Nav.Link>
+
               <Nav.Link>
                 <CustomLink to="/about">About</CustomLink>
               </Nav.Link>
@@ -53,7 +51,7 @@ const Header = () => {
                   <button
                     onClick={handleSignOut}
                     className="btn btn-link text-decoration-none"
-                    style={{height:39, marginTop:23}}
+                    style={{ height: 39, marginTop: 23 }}
                   >
                     Sign Our
                   </button>

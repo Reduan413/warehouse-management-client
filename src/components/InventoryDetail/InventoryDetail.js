@@ -36,13 +36,16 @@ const InventoryDetail = () => {
     };
     //console.log(inventory);
     await axios
-      .put(`http://localhost:5000/inventory/${id}`, inventory)
+      .put(
+        `https://morning-crag-28829.herokuapp.com/inventory/${id}`,
+        inventory
+      )
       .then((res) => {
         const { data } = res;
         //console.log(data);
       });
     //setInvetory(inventory);
-    fetchData()
+    fetchData();
   };
   const handleRestock = async (e) => {
     e.preventDefault();
@@ -60,7 +63,10 @@ const InventoryDetail = () => {
     };
     //console.log(inventory);
     await axios
-      .put(`http://localhost:5000/inventory/${_id}`, inventory)
+      .put(
+        `https://morning-crag-28829.herokuapp.com/inventory/${_id}`,
+        inventory
+      )
       .then((res) => {
         const { data } = res;
         //console.log(data);

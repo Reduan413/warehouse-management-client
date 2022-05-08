@@ -9,7 +9,7 @@ const useInventorys = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const url = `http://localhost:5000/inventory?page=${page}&size=${size}`;
+      const url = `https://morning-crag-28829.herokuapp.com/inventory?page=${page}&size=${size}`;
 
       await axios.get(url).then((res) => {
         setInvetorys(res.data);
@@ -20,12 +20,14 @@ const useInventorys = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      await axios.get(`http://localhost:5000/inventoryCount`).then((res) => {
-        const count = res.data.count;
-        const pages = Math.ceil(count / 10);
-        console.log(pages);
-        setPageCount(pages);
-      });
+      await axios
+        .get(`https://morning-crag-28829.herokuapp.com/inventoryCount`)
+        .then((res) => {
+          const count = res.data.count;
+          const pages = Math.ceil(count / 10);
+          console.log(pages);
+          setPageCount(pages);
+        });
     };
     fetchData();
   }, []);

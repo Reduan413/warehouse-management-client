@@ -6,24 +6,24 @@ const Answer = () => {
     <div className="answer container">
       <h2>What is the purpose of jwt and how does it work?</h2>
       <p>
-        React is a JavaScript library (not a framework) that creates user
-        interfaces (UIs) in a predictable and efficient way using declarative
-        code. You can use it to help build single page applications and mobile
-        apps, or to build complex apps if you utilise it with other libraries.
-        Alongside Angular, and more recently Vue, React is a critical tool that
-        has had a big impact on the way we build web applications. While
-        building client-side apps, a team of Facebook developers realized that
-        the DOM is slow.So, to make it faster, React implements a virtual DOM
-        that is basically a DOM tree representation in JavaScript. So when it
-        needs to read or write to the DOM, it will use the virtual
-        representation of it. Then the virtual DOM will try to find the most
-        efficient way to update the browser’s DOM.Unlike browser DOM elements,
-        React elements are plain objects and are cheap to create. React DOM
-        takes care of updating the DOM to match the React elements. The reason
-        for this is that JavaScript is very fast and it’s worth keeping a DOM
-        tree in it to speed up its manipulation. Although React was conceived to
-        be used in the browser, because of its design it can also be used in the
-        server with Node.js.
+        JWT, or JSON Web Token, is an open standard used to share information
+        between two parties securely — a client and a server.It’s usually used
+        in the context of other authentication mechanisms like OAuth, OpenID to
+        share user-related information.JWT authentication is a token-based
+        stateless authentication mechanism. It is popularly used as a
+        client-side-based stateless session, this means the server doesn’t have
+        to completely rely on a data store (or) database to save session
+        information. <br />
+        JWTs differ from other web tokens in that they contain a set of claims.
+        The claim is used to transmit information between the two parties. What
+        these claims are depends on the use at hand. For example, a claimant may
+        claim who issued the token, how long it was valid, or what permission
+        was granted to the client. A JWT is a string made up of three parts,
+        separated by dots (.), and serialized using base64. In the most common
+        serialization format, compact serialization, the JWT looks something
+        like this: xxxxx.yyyyy.zzzzz. <br/>
+        Once decoded, you will get two JSON
+        strings: <br/>* The header and the payload.<br/>*  The signature.
       </p>
       <div className="mt-3">
         <h2>Difference between javascript and node js ?</h2>

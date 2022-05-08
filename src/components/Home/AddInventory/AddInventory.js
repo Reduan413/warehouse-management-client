@@ -1,4 +1,7 @@
-import { faAngleRight, faHouseChimney } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAngleRight,
+  faHouseChimney,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import React, { useState } from "react";
@@ -22,20 +25,22 @@ const AddInventory = () => {
     const inventory = {
       email: user.email,
       name: event.target.name.value,
-      supplier: event.target.supplier.value,
+      supplierName: event.target.supplier.value,
       description: event.target.description.value,
       img: event.target.img.value,
       price: event.target.price.value,
       quantity: event.target.quantity.value,
       sold: "0",
     };
-    axios.post("http://localhost:5000/inventory", inventory).then((res) => {
-      const { data } = res;
-      if (data.insertedId) {
-        alert("Your order is booked!!!");
-        event.target.reset();
-      }
-    });
+    axios
+      .post("https://morning-crag-28829.herokuapp.com/inventory", inventory)
+      .then((res) => {
+        const { data } = res;
+        if (data.insertedId) {
+          alert("Your order is booked!!!");
+          event.target.reset();
+        }
+      });
     console.log(inventory);
 
     //setValidated(true);

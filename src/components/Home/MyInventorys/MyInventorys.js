@@ -1,4 +1,8 @@
-import { faAngleRight, faHouseChimney, faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAngleRight,
+  faHouseChimney,
+  faTrashCan,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
@@ -18,7 +22,7 @@ const MyInventorys = () => {
   }, [user]);
   const getMyInventory = async () => {
     const email = user?.email;
-    const url = `http://localhost:5000/myinventory?email=${email}`;
+    const url = `https://morning-crag-28829.herokuapp.com/myinventory?email=${email}`;
     try {
       const { data } = await axios.get(url, {
         headers: {
@@ -32,7 +36,7 @@ const MyInventorys = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure you want to delete?");
     if (proceed) {
-      const url = `http://localhost:5000/inventory/${id}`;
+      const url = `https://morning-crag-28829.herokuapp.com/inventory/${id}`;
       fetch(url, {
         method: "DELETE",
       })

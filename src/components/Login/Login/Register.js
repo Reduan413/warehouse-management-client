@@ -5,6 +5,7 @@ import {
 } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
+import useToken from "../../../hooks/useToken";
 import Loading from "../../Shared/Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import "./Login.css";
@@ -15,6 +16,7 @@ const Register = () => {
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
   const navigate = useNavigate();
   let errorElement;
+  const [token] = useToken(user);
 
   const navigateLogin = () => {
     navigate("/login");
@@ -24,7 +26,7 @@ const Register = () => {
     return <Loading />
   }
 
-  if(user){
+  if(token){
     navigate("/");
   }
   if(error){
