@@ -12,6 +12,7 @@ import RequierAuth from "./components/Login/RequierAuth/RequireAuth";
 import ManageInventory from "./components/ManageInventory/ManageInventory";
 import Footer from "./components/Shared/Footer/Footer";
 import Header from "./components/Shared/Header/Header";
+import Answer from "./components/Home/Answer/Answer";
 
 function App() {
   return (
@@ -54,7 +55,8 @@ function App() {
         />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="about" element={<About />} />
+        <Route path="/answer" element={<Answer />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
       <ToastContainer />
