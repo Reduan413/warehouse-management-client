@@ -1,9 +1,12 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import axios from "axios";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../firebase.init";
 
 const AddInventory = () => {
   const [validated, setValidated] = useState(false);
+  const [user] = useAuthState(auth);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -14,22 +17,22 @@ const AddInventory = () => {
       console.log("email,name,supplier,description,img,price,quantity");
     }
     const inventory = {
-      email: event.target.email.value,
+      email: user.email,
       name: event.target.name.value,
       supplier: event.target.supplier.value,
       description: event.target.description.value,
       img: event.target.img.value,
       price: event.target.price.value,
       quantity: event.target.quantity.value,
+      sold: "0",
     };
-    axios.post('http://localhost:5000/inventory',inventory)
-    .then(res => {
-        const {data} = res;
-        if(data.insertedId){
-            alert('Your order is booked!!!');
-            event.target.reset();
-          }
-    })
+    axios.post("http://localhost:5000/inventory", inventory).then((res) => {
+      const { data } = res;
+      if (data.insertedId) {
+        alert("Your order is booked!!!");
+        event.target.reset();
+      }
+    });
     console.log(inventory);
 
     //setValidated(true);
@@ -45,9 +48,12 @@ const AddInventory = () => {
             <Form.Control
               required
               type="email"
+              value={user?.email}
               name="email"
               placeholder="Enter Your Eamil"
-              defaultValue=""
+              required
+              readOnly
+              disabled
             />
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
           </Form.Group>
@@ -127,7 +133,7 @@ const AddInventory = () => {
           </Form.Group>
         </Row>
         <div className="text-end">
-          <Button type="submit">Submit form</Button>
+          <Button type="submit">Add Item</Button>
         </div>
       </Form>
     </Container>

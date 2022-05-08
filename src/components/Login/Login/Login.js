@@ -5,12 +5,14 @@ import {
 } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
+import useToken from "../../../hooks/useToken";
 import Loading from "../../Shared/Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import "./Login.css";
 
 const Login = () => {
   const navigate = useNavigate();
+
   const emailRef = useRef("");
   const location = useLocation();
   const [signInWithEmailAndPassword, user, loading, error] =
@@ -19,6 +21,7 @@ const Login = () => {
     useSendPasswordResetEmail(auth);
   let errorElement;
   let from = location.state?.from?.pathname || "/";
+  const [token] = useToken(user);
   const navigateRegister = (e) => {
     navigate("/register");
   };
@@ -40,10 +43,10 @@ const Login = () => {
       alert("Please Enter your email address");
     }
   };
-  
-  // if (user) {
-  //   navigate(from, { replace: true });
-  // }
+
+  if (token) {
+    navigate(from, { replace: true });
+  }
   if (loading || sending) {
     return <Loading />;
   }
